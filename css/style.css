@@ -38,8 +38,18 @@ body{
 	letter-spacing: 0.2px;
 	word-wrap: break-word;
 	font-weight: 400;
-	background-color: #000;
+	/*background-color: #000;*/
 	color: #A2A2A2;
+	background: url('../img/background.jpg') center center no-repeat;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.8);
 }
 svg{
 	fill: currentcolor;
