@@ -552,7 +552,8 @@ h6 { font-size: 16px; }
 	border-radius: 10px;
 }
 .edrea_tm_about .right{
-	width: 60%;
+	/*width: 60%;*/
+	width: 80%;
 	padding-left: 100px;
 }
 .edrea_tm_about .right .short{
