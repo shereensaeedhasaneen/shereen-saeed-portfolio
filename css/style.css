@@ -1281,7 +1281,7 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
-	border-bottom: 1px dashed rgba(255,255,255,.15);
+	border-bottom: 1px dashed rgba(255, 254, 254, 0.15);
 	padding-bottom: 20px;
 }
 .edrea_tm_main_title h3{
@@ -2164,4 +2164,8 @@ h6 { font-size: 16px; }
 	.edrea_tm_modalbox .news_popup_details{padding-left: 20px;padding-right: 20px;}
 	.edrea_tm_modalbox .news_popup_details .news_main_title h3{font-size: 20px;}
 	.edrea_tm_modalbox .news_popup_details .news_main_title{margin-bottom: 18px;}	
+}
+input , textarea{
+	border: 1px solid #4e4e4e !important;
+    border-radius: 8px !important;
 }
