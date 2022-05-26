@@ -479,7 +479,10 @@ h6 { font-size: 16px; }
 	position: relative;
 	z-index: 5;
 }
-.edrea_tm_button a{
+.edrea_tm_button a , .edrea_tm_button button{
+	outline: none;
+	border: none;
+	cursor: pointer;
 	text-decoration: none;
 	color: #fff;
 	display: inline-block;
@@ -495,7 +498,7 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.edrea_tm_button a:hover{
+.edrea_tm_button a:hover , .edrea_tm_button button:hover{
 	background-color: #fff;
 	color: #eb4a4c;
 }
