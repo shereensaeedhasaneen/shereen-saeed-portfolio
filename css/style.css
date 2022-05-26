@@ -1085,7 +1085,7 @@ h6 { font-size: 16px; }
 	position: relative;
 }
 .edrea_tm_modalbox .about_popup_details .timeline .list ul li .time{
-	width: 50%;
+	width: 40%;
 	padding-right: 15px;
 }
 .edrea_tm_modalbox .about_popup_details .timeline .list ul li .time span{
@@ -1097,7 +1097,7 @@ h6 { font-size: 16px; }
 	white-space: nowrap;
 }
 .edrea_tm_modalbox .about_popup_details .timeline .list ul li .place{
-	width: 50%;
+	width: 60%;
 	padding-left: 15px;
 }
 .edrea_tm_modalbox .about_popup_details .timeline .list ul li .place h3{
