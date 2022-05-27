@@ -1,0 +1,75 @@
+.header-section{
+    position: relative;
+    .header_logo{
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    .header_menu ul{
+        list-style-type: none;
+        padding-left: 0;
+        li{
+            display: inline-block;
+            &.active{
+                a{
+                    color: $main_color;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-family: $font_header;
+                font-weight: 500;
+                
+                -webkit-transition: all .3s ease;
+                   -moz-transition: all .3s ease;
+                    -ms-transition: all .3s ease;
+                     -o-transition: all .3s ease;
+                        transition: all .3s ease;
+                &:hover{
+                    color: $main_color;
+                }
+            }
+        }
+    }
+
+
+    //TODO: Mobile Header Responsive
+
+    .mobile_open_menu{
+        font-size: 30px;
+        padding-top: 5px;
+    }  
+    .mobile-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+
+        ul{
+            padding-left: 15%;
+            li{
+                margin-top: 8%;
+            }
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+      }  
+}
+
+
+
+
