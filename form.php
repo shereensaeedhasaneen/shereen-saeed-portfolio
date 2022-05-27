@@ -1,51 +1,37 @@
-<?php 
-$errors = '';
-$myemail = 'sheerysaeed123@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  || 
-   empty($_POST['email']) || 
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
+
+<?php  
+
+if(isset($_POST['submit'])) {
+ $mailto = "sheerysaeed123@gmail.com";  //My email address
+ //getting customer data
+ $name = $_POST['name']; //getting customer name
+ $fromEmail = $_POST['email']; //getting customer email
+ $fromMessage = $_POST['message']; //getting customer message 
+
+
+ //Email body I will receive
+ $message = "Cleint Name: " . $name . "\n"
+ . "Client Message: " . $fromMessage . "\n\n"
+ ;
+
+
+ //Email headers
+ $headers = "From: " . $fromEmail; // Client email, I will receive
+ $headers2 = "From: " . $mailto; // This will receive client
+
+ //PHP mailer function
+
+  $result1 = mail($mailto, $message, $headers); // This email sent to My address
+  $result2 = mail($fromEmail, $fromMessage, $headers2); //This confirmation email to client
+
+  //Checking if Mails sent successfully
+
+  if ($result1 && $result2) {
+    $success = "Your Message was sent Successfully!";
+  } else {
+    $failed = "Sorry! Message was not sent, Try again Later.";
+  }
+
 }
 
-$name = $_POST['name']; 
-$email_address = $_POST['email']; 
-$message = $_POST['message']; 
-
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
-
-if( empty($errors))
-{
-	$to = $myemail; 
-	$email_subject = "Contact form submission: $name";
-	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
-	
-	$headers = "From: $myemail\n"; 
-	$headers .= "Reply-To: $email_address";
-	
-	mail($to,$email_subject,$email_body,$headers);
-	//redirect to the 'thank you' page
-	//header('Location: index.html');
-} 
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html>
-<head>
-	<title>Contact form handler</title>
-</head>
-
-<body>
-<!-- This page is displayed only if there is some error -->
-<?php
-echo nl2br($errors);
-?>
-
-
-</body>
-</html>
