@@ -1,0 +1,49 @@
+$main_color: #eb4a4c;
+$text_color: #A2A2A2;
+$font_family: "Mulish";
+$font_header :"Poppins";
+$mobile_max_width : 950px;
+
+.container{
+    padding: 2.5% 13%;
+}
+.coloring{
+    color: $main_color
+}
+
+.main_button{
+    a,button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        background-color: $main_color;
+        padding: 10px 40px;
+        text-align: center;
+        border-radius: 50px;
+        font-family: $font_header;
+        
+        -webkit-transition: all .3s ease;
+           -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+             -o-transition: all .3s ease;
+                transition: all .3s ease;
+        &:hover{
+            background-color: #fff;
+            color: $main_color;
+        }
+    }
+}
+.show_section{
+    visibility: visible;
+}
+.hide_section{
+    display: none
+}
+@import './base-structure/base.scss';
+@import './layout/header.scss';
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/contact.scss';
