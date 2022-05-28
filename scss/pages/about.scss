@@ -24,11 +24,7 @@
         .modal-header{
             border-bottom: none;
             .btn-close{
-                color: #fff ;
-                &:focus{
-                    outline: none ;
-                    border: none ;
-                }
+                font-size: 12px;
             }
         }
         .modal-content{
@@ -43,5 +39,42 @@
                 margin: 1.75rem auto;
             }
         }
+
+        // .modal-body{
+            .popup_name{
+                font-size: 22px;
+                text-transform: uppercase;
+                margin-bottom: 7px;
+            }
+            .popup_job{
+                font-weight: 400;
+                color: $text_color;
+                font-size: 15px;
+            }
+
+            .left-side{
+                padding: 50px 40px 0 50px;
+                height: 614px;
+                border-right: $border_dashed_color;
+            }
+            .left_list{
+                border-bottom: $border_dashed_color;
+                padding-bottom: 6px;
+                span{
+                    color: #fff;
+                    padding-left: 10px;
+                }
+                i{
+                    color: $main_color;
+	                font-size: 16px;
+                }
+            }
+
+            .main_button{
+                a{
+                    width: 100%;
+                }
+            }
+       // }
     }
 }

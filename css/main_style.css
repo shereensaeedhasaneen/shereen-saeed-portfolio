@@ -1,5 +1,6 @@
 body {
   scroll-behavior: smooth;
+  font-family: "Poppins" !important;
 }
 
 .container {
@@ -195,11 +196,7 @@ body::before {
   border-bottom: none;
 }
 .about_section .modal .modal-header .btn-close {
-  color: #fff;
-}
-.about_section .modal .modal-header .btn-close:focus {
-  outline: none;
-  border: none;
+  font-size: 12px;
 }
 .about_section .modal .modal-content {
   background-color: #222222;
@@ -212,6 +209,36 @@ body::before {
     max-width: 800px !important;
     margin: 1.75rem auto;
   }
+}
+.about_section .modal .popup_name {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.about_section .modal .popup_job {
+  font-weight: 400;
+  color: #A2A2A2;
+  font-size: 15px;
+}
+.about_section .modal .left-side {
+  padding: 50px 40px 0 50px;
+  height: 614px;
+  border-right: 1px dashed rgba(255, 255, 255, 0.15);
+}
+.about_section .modal .left_list {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+}
+.about_section .modal .left_list span {
+  color: #fff;
+  padding-left: 10px;
+}
+.about_section .modal .left_list i {
+  color: #eb4a4c;
+  font-size: 16px;
+}
+.about_section .modal .main_button a {
+  width: 100%;
 }
 
 .contact_section {

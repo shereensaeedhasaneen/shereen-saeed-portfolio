@@ -3,9 +3,10 @@ $text_color: #A2A2A2;
 $font_family: "Mulish";
 $font_header :"Poppins";
 $mobile_max_width : 950px;
-
+$border_dashed_color :  1px dashed rgba(255,255,255,.15);
 body{
     scroll-behavior: smooth;
+    font-family: $font_header !important;
 }
 .container{
     padding: 2.5% 13%;
