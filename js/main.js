@@ -27,5 +27,6 @@ function openNav() {
     var href = $(this).find('a').attr('href');
     $(`${href}`).removeClass('hide_section')
     $(`${href}`).addClass('show_section')
+  
 
   })
