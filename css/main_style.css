@@ -1,3 +1,7 @@
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   padding: 2.5% 13%;
 }
@@ -31,10 +35,14 @@
 
 .show_section {
   visibility: visible;
+  transition: opacity 1s ease-out;
+  opacity: 1;
 }
 
 .hide_section {
   display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
 }
 
 body {
@@ -163,7 +171,47 @@ body::before {
 
 .about_section {
   position: relative;
-  color: antiquewhite;
+  margin-top: 5%;
+  color: #fff;
+}
+.about_section .about-data {
+  width: 90%;
+}
+.about_section .about_title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+.about_section .about_text {
+  color: #A2A2A2;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+.about_section .modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.about_section .modal .modal-header {
+  border-bottom: none;
+}
+.about_section .modal .modal-header .btn-close {
+  color: #fff;
+}
+.about_section .modal .modal-header .btn-close:focus {
+  outline: none;
+  border: none;
+}
+.about_section .modal .modal-content {
+  background-color: #222222;
+  width: 800px;
+  height: 617px;
+  margin-top: 9%;
+}
+@media (min-width: 576px) {
+  .about_section .modal .modal-dialog {
+    max-width: 800px !important;
+    margin: 1.75rem auto;
+  }
 }
 
 .contact_section {

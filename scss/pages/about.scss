@@ -1,4 +1,47 @@
 .about_section{
     position: relative;
-    color: antiquewhite;
+    margin-top: 5%;
+    color: #fff;
+    .about-data{
+        width: 90%;
+    }
+    .about_title{
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: $font_header;
+    }
+
+    .about_text{
+        color: $text_color;
+        font-size: 20px;
+        font-family: $font_header;
+    }
+
+    /////////////// about modal /////////////////
+    .modal{
+        background-color: rgba(0,0,0,0.6);
+        .modal-header{
+            border-bottom: none;
+            .btn-close{
+                color: #fff ;
+                &:focus{
+                    outline: none ;
+                    border: none ;
+                }
+            }
+        }
+        .modal-content{
+            background-color: #222222;
+            width: 800px;
+            height: 617px;
+            margin-top: 9%;
+        }
+        @media (min-width: 576px){
+            .modal-dialog {
+                max-width: 800px !important;
+                margin: 1.75rem auto;
+            }
+        }
+    }
 }

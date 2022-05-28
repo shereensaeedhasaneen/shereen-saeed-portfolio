@@ -4,6 +4,9 @@ $font_family: "Mulish";
 $font_header :"Poppins";
 $mobile_max_width : 950px;
 
+body{
+    scroll-behavior: smooth;
+}
 .container{
     padding: 2.5% 13%;
 }
@@ -38,9 +41,15 @@ $mobile_max_width : 950px;
 }
 .show_section{
     visibility: visible;
+    //transition: visibility 2s ;
+    transition: opacity 1s ease-out;
+    opacity: 1;
 }
 .hide_section{
-    display: none
+    display: none;
+    //transition: display 2s ;
+    transition: opacity 1s ease-out;
+    opacity: 0;
 }
 @import './base-structure/base.scss';
 @import './layout/header.scss';
