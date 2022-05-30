@@ -202,7 +202,20 @@ body::before {
   background-color: #222222;
   width: 800px;
   height: 617px;
-  margin-top: 9%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.about_section .modal .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.about_section .modal .modal-content::-webkit-scrollbar-track {
+  background: #222222;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+.about_section .modal .modal-content::-webkit-scrollbar-thumb {
+  background: rgb(182, 76, 76);
+  border-radius: 20px;
 }
 @media (min-width: 576px) {
   .about_section .modal .modal-dialog {
@@ -221,7 +234,7 @@ body::before {
   font-size: 15px;
 }
 .about_section .modal .left-side {
-  padding: 50px 40px 0 50px;
+  padding: 40px 40px 0 50px;
   height: 614px;
   border-right: 1px dashed rgba(255, 255, 255, 0.15);
 }
@@ -239,6 +252,101 @@ body::before {
 }
 .about_section .modal .main_button a {
   width: 100%;
+}
+.about_section .modal .right-side {
+  padding: 40px 0px 0 40px;
+}
+.about_section .modal .right-side .about_popup_title p {
+  border-bottom: 2px solid #eb4a4c;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+  width: 40%;
+}
+.about_section .modal .right-side .timeline .list ul {
+  margin: 0px;
+  list-style-type: none;
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 0;
+}
+.about_section .modal .right-side .timeline .list ul::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.about_section .modal .right-side .timeline .list ul li {
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 45px;
+}
+.about_section .modal .right-side .timeline .list ul li::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background: #eb4a4c;
+  border-radius: 100%;
+  border: solid 1px #eb4a4c;
+  left: -5px;
+  top: 12px;
+}
+.about_section .modal .right-side .timeline .list ul li .list_inner {
+  display: flex;
+}
+.about_section .modal .right-side .timeline .list ul li .time span {
+  display: inline-block;
+  padding: 5px 25px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #afaeaa;
+}
+.about_section .modal .right-side .timeline .list ul li .place {
+  width: 60%;
+  padding-left: 15px;
+}
+.about_section .modal .right-side .timeline .list ul li .place h3 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.about_section .modal .right-side .timeline .list ul li .place span {
+  font-size: 14px;
+  color: #afaeaa;
+}
+.about_section .modal .right-side .service .about_title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.about_section .modal .right-side .service .list ul {
+  margin: 0px;
+  list-style-type: none;
+  padding-left: 10px;
+}
+.about_section .modal .right-side .service .list ul li {
+  margin: 0px 0px 8px 0px;
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-left: 10px;
+  color: #afaeaa;
+}
+.about_section .modal .right-side .service .list ul li i {
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #eb4a4c;
+  font-size: 16px;
+  margin-top: 1px;
 }
 
 .contact_section {
