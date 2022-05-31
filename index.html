@@ -24,6 +24,8 @@
 <!--Font Awesome cdn-->
 <script src="./js/fontAwesome.js"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
 </head>
 
 <body> 
@@ -136,10 +138,12 @@
 
             <!-- about popup -->
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop"  tabindex="-1" >
                     <div class="modal-dialog">
-                    <div class="modal-content">
                         
+                        <button type="button" class="btn-close btn-close-white " onclick="alert('df')" data-bs-dismiss="modal" aria-label="Close"></button>
+                   
+                        <div class="modal-content">          
                             <div class="row">
                                 <div class="col-5 left-side">
                                     <div class="d-flex flex-column align-items-center">
@@ -268,6 +272,92 @@
                 </div>
         </article>
 
+        <article id="portfolio" class="portfolio_section hide_section">
+            <div class="container">
+                <div class="row">
+                    <p class="portfolio_title mb-5">My Projects</p>
+                    <div class="projects owl-carousel owl-theme">
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/shoura.png">
+                            </div>
+                            <div class="details">
+                                <h3>Shoura</h3>
+                                <span>Ecommerce project</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="https://shouraonline.com/"></a>
+                        </div>
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/caregateway.png" class="care_project">
+                            </div>
+                            <div class="details">
+                                <h3>Care Gateway</h3>
+                                <span>Medical project</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="https://mophx.com/demo/caregateway/index.html"></a>
+                        </div>
+                        
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/ipharmacy.png" class="ipharmacy">
+                            </div>
+                            <div class="details">
+                                <h3>ipharmacy</h3>
+                                <span>HealthCare project</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="http://mophx.com/demo/ipharmacy/index.html"></a>
+                        </div>
+
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/medfest.png" class="medfest">
+                            </div>
+                            <div class="details">
+                                <h3>Medfest</h3>
+                                <span>Films project</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="https://mophx.com/medfest/index.html"></a>
+                        </div>
+                      
+                                        
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/tamweel.png" class="tamweel">
+                            </div>
+                            <div class="details">
+                                <h3>TamweelMisr</h3>
+                                <span>Bank Loans project</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="https://tamweelmisr.com/"></a>
+                        </div>
+
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/agrimisr.png" class="agrimisr">
+                            </div>
+                            <div class="details">
+                                <h3>Agrimisr</h3>
+                                <span>Ecommerce homePage</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="https://mophx.com/Agrimisr/index.html"></a>
+                        </div>
+
+                        <div class="list_inner">
+                            <div class="screen">
+                                <img src="./img/portfolio/ayadymisr.png" class="ayadymisr">
+                            </div>
+                            <div class="details">
+                                <h3>Ayadymisr</h3>
+                                <span>Ecommerce homePage</span>
+                            </div>
+                            <a class="project_link" target="_blank" href="http://mophx.com/demo/ayady-masr/index.html"></a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </article>
+
         <article id="contact" class="contact_section hide_section">
             <div class="container">
                 <div class="row">
@@ -330,6 +420,24 @@
     
     <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
+    <!--<script src="js/secondowlCarousel/jquery-1.12.0.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <script>
+        $(document).ready(function(){
+            $('.projects').owlCarousel({
+                loop:true,
+                autoplay: false,
+                autoplayTimeout: 2500,
+                center: false,
+                items:3,
+                loop:true,
+                margin:15,
+                stagePadding: 30,
+             
+          });
+          });
+        
+    </script>
 </body>
 </html>
