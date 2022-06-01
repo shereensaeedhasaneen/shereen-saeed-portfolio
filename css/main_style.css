@@ -192,11 +192,19 @@ body::before {
 .about_section .modal {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.about_section .modal .modal-header {
-  border-bottom: none;
+.about_section .modal .btn-close {
+  position: absolute;
+  z-index: 4;
+  left: 103%;
+  top: 1.5%;
+  font-size: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 7px;
 }
-.about_section .modal .modal-header .btn-close {
-  font-size: 12px;
+.about_section .modal .btn-close:hover {
+  padding: 4px;
+  color: #eb4a4c !important;
 }
 .about_section .modal .modal-content {
   background-color: #222222;
@@ -204,6 +212,32 @@ body::before {
   height: 617px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+.about_section .modal .modal-content::before {
+  position: fixed;
+  content: "";
+  top: 23px;
+  left: 401px;
+  right: 0px;
+  height: 50px;
+  background-color: #222;
+  z-index: 3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 49.9%;
+}
+.about_section .modal .modal-content::after {
+  position: fixed;
+  content: "";
+  bottom: 73px;
+  left: 401px;
+  right: 0px;
+  height: 50px;
+  background-color: #222;
+  z-index: 3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 49.9%;
 }
 .about_section .modal .modal-content::-webkit-scrollbar {
   width: 8px;
@@ -214,7 +248,7 @@ body::before {
   border-bottom-right-radius: 80px;
 }
 .about_section .modal .modal-content::-webkit-scrollbar-thumb {
-  background: rgb(182, 76, 76);
+  background: #b64c4c;
   border-radius: 20px;
 }
 @media (min-width: 576px) {
@@ -234,9 +268,8 @@ body::before {
   font-size: 15px;
 }
 .about_section .modal .left-side {
-  padding: 40px 40px 0 50px;
+  padding: 65px 40px 0 50px;
   height: 614px;
-  border-right: 1px dashed rgba(255, 255, 255, 0.15);
 }
 .about_section .modal .left_list {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
@@ -254,7 +287,8 @@ body::before {
   width: 100%;
 }
 .about_section .modal .right-side {
-  padding: 40px 0px 0 40px;
+  padding: 65px 0px 0 40px;
+  border-left: 1px dashed rgba(255, 255, 255, 0.15);
 }
 .about_section .modal .right-side .about_popup_title p {
   border-bottom: 2px solid #eb4a4c;
@@ -347,6 +381,112 @@ body::before {
   color: #eb4a4c;
   font-size: 16px;
   margin-top: 1px;
+}
+
+.portfolio_section {
+  position: relative;
+  color: #fff;
+}
+.portfolio_section .portfolio_title {
+  font-weight: 700;
+  font-family: "Poppins";
+  font-size: 30px;
+}
+.portfolio_section .projects {
+  background: transparent;
+  padding: 10px 5px;
+}
+.portfolio_section .projects .screen {
+  display: block;
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.portfolio_section .projects .screen img {
+  bottom: -100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: top 5s;
+  -moz-transition: top 5s;
+  -ms-transition: top 5s;
+  -o-transition: top 5s;
+  transition: bottom 5s;
+}
+.portfolio_section .projects .screen img.care_project {
+  bottom: -180%;
+}
+.portfolio_section .projects .screen img.ipharmacy {
+  bottom: -75%;
+}
+.portfolio_section .projects .screen img.medfest {
+  bottom: -400%;
+}
+.portfolio_section .projects .screen img.tamweel {
+  bottom: -170%;
+}
+.portfolio_section .projects .screen img.agrimisr {
+  bottom: -213%;
+}
+.portfolio_section .projects .screen img.ayadymisr {
+  bottom: -252%;
+}
+.portfolio_section .projects .list_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.portfolio_section .projects .list_inner:hover img {
+  bottom: 0;
+  -webkit-transition: all 5s;
+  -moz-transition: all 5s;
+  -ms-transition: all 5s;
+  -o-transition: all 5s;
+  transition: all 5s;
+}
+.portfolio_section .projects .list_inner:hover .details {
+  bottom: 20px;
+}
+.portfolio_section .projects .details {
+  position: absolute;
+  z-index: 2;
+  bottom: -100px;
+  left: 20px;
+  background-color: #fff;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio_section .projects .details h3 {
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.portfolio_section .projects .details span {
+  color: #777;
+  font-size: 14px;
+}
+.portfolio_section .projects .project_link {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 5;
 }
 
 .contact_section {
