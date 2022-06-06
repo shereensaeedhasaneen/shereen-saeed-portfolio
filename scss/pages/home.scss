@@ -8,6 +8,15 @@
         font-weight: 700;
         text-transform: uppercase;
         line-height: 105px;
+        @media (max-width:550px) {
+            font-size: 32px;
+            line-height: 65px;
+        }
+
+        @media (min-width:551px) and (max-width:1000px) {
+            font-size: 50px;
+            //line-height: 65px;
+        }
     }
 
     .job{
@@ -15,6 +24,9 @@
         font-weight: 500;
         color: $text_color;
         margin-bottom: 30px;
+        @media (max-width:550px) {
+            font-size: 18px;
+        }
     }
 
     .links {

@@ -9,6 +9,10 @@
     .header_menu ul{
         list-style-type: none;
         padding-left: 0;
+        width:45%;
+        @media (max-width:550px) {
+            width: 100%;
+        }
         li{
             display: inline-block;
             &.active{
@@ -35,39 +39,13 @@
     }
 
 
-    //TODO: Mobile Header Responsive
-
-    .mobile_open_menu{
+    .navbar-toggler-icon{
         font-size: 30px;
-        padding-top: 5px;
-    }  
-    .mobile-menu {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-
-        ul{
-            padding-left: 15%;
-            li{
-                margin-top: 8%;
-            }
-        }
-
-        .closebtn {
-            position: absolute;
-            top: 0;
-            right: 15px;
-            font-size: 36px;
-            margin-left: 50px;
-          }
-      }  
+        color: #fff;
+        display: contents;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
