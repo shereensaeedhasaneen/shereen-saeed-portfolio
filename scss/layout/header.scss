@@ -1,20 +1,44 @@
 .header-section{
     position: relative;
+
+    .navbar-collapse{
+        // position: absolute;
+        // top: 100px;
+        // width: 75%;
+        @media (max-width:1000px) {
+            border-radius: 16px;
+            // padding:7% 2% ;
+             background: #212121;
+             box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+       
+    }
     .header_logo{
         img{
             border-radius: 50%;
         }
     }
 
-    .header_menu ul{
+    .header_menu{
+        width:45%;
+        @media (max-width:1000px) {
+            width: 100%;
+            padding:7% 2% ;
+        }
+     ul{
         list-style-type: none;
         padding-left: 0;
-        width:45%;
-        @media (max-width:550px) {
+        width:100%;
+        @media (max-width:1000px) {
             width: 100%;
+            flex-wrap: wrap;
         }
         li{
             display: inline-block;
+            @media (max-width:1000px) {
+                width: 50%;
+                text-align: center;
+            }
             &.active{
                 a{
                     color: $main_color;
@@ -37,7 +61,7 @@
             }
         }
     }
-
+    }
 
     .navbar-toggler-icon{
         font-size: 30px;
