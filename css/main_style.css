@@ -259,7 +259,7 @@ body::before {
   border-bottom-right-radius: 80px;
 }
 .about_section .modal .modal-content::-webkit-scrollbar-thumb {
-  background: rgb(182, 76, 76);
+  background: #b64c4c;
   border-radius: 20px;
 }
 @media (min-width: 576px) {
