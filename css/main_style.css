@@ -367,11 +367,12 @@ body::before {
   font-size: 14px;
   color: #afaeaa;
 }
-.about_section .modal .right-side .service .about_title {
+.about_section .modal .right-side .service .about_title p {
   font-size: 18px;
   font-weight: 600;
   border-bottom: 2px solid #eb4a4c;
   width: 40%;
+  margin-bottom: 0;
 }
 .about_section .modal .right-side .service .list ul {
   margin: 0px;
