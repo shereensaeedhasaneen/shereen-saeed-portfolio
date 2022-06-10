@@ -259,7 +259,7 @@ body::before {
   border-bottom-right-radius: 80px;
 }
 .about_section .modal .modal-content::-webkit-scrollbar-thumb {
-  background: #b64c4c;
+  background: rgb(182, 76, 76);
   border-radius: 20px;
 }
 @media (min-width: 576px) {
@@ -400,6 +400,10 @@ body::before {
 .portfolio_section {
   position: relative;
   color: #fff;
+}
+.portfolio_section .container {
+  padding-top: 1.5%;
+  padding-bottom: 0;
 }
 .portfolio_section .portfolio_title {
   font-weight: 700;
