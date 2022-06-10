@@ -8,6 +8,16 @@ body{
     scroll-behavior: smooth;
     font-family: $font_header !important;
 }
+
+main{
+    @media (max-width:500px) {
+        margin-top: 25%;
+    }
+
+    @media (min-width:501px) and (max-width:950px) {
+        margin-top: 15%;
+    }
+}
 .container{
     padding: 2.5% 13%;
 }
