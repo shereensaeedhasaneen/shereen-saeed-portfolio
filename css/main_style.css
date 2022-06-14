@@ -3,6 +3,17 @@ body {
   font-family: "Poppins" !important;
 }
 
+@media (max-width: 500px) {
+  main {
+    margin-top: 25%;
+  }
+}
+@media (min-width: 501px) and (max-width: 950px) {
+  main {
+    margin-top: 15%;
+  }
+}
+
 .container {
   padding: 2.5% 13%;
 }
@@ -77,15 +88,44 @@ body::before {
 .header-section {
   position: relative;
 }
+@media (max-width: 1000px) {
+  .header-section .navbar-collapse {
+    border-radius: 16px;
+    background: #212121;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
 .header-section .header_logo img {
   border-radius: 50%;
+}
+.header-section .header_menu {
+  width: 45%;
+}
+@media (max-width: 1000px) {
+  .header-section .header_menu {
+    width: 100%;
+    padding: 7% 2%;
+  }
 }
 .header-section .header_menu ul {
   list-style-type: none;
   padding-left: 0;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .header-section .header_menu ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }
 .header-section .header_menu ul li {
   display: inline-block;
+}
+@media (max-width: 1000px) {
+  .header-section .header_menu ul li {
+    width: 50%;
+    text-align: center;
+  }
 }
 .header-section .header_menu ul li.active a {
   color: #eb4a4c;
@@ -104,34 +144,12 @@ body::before {
 .header-section .header_menu ul li a:hover {
   color: #eb4a4c;
 }
-.header-section .mobile_open_menu {
+.header-section .navbar-toggler-icon {
   font-size: 30px;
-  padding-top: 5px;
-}
-.header-section .mobile-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-.header-section .mobile-menu ul {
-  padding-left: 15%;
-}
-.header-section .mobile-menu ul li {
-  margin-top: 8%;
-}
-.header-section .mobile-menu .closebtn {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  font-size: 36px;
-  margin-left: 50px;
+  color: #fff;
+  display: contents;
+  align-items: center;
+  justify-content: center;
 }
 
 .home_section {
@@ -146,11 +164,27 @@ body::before {
   text-transform: uppercase;
   line-height: 105px;
 }
+@media (max-width: 550px) {
+  .home_section .name {
+    font-size: 32px;
+    line-height: 65px;
+  }
+}
+@media (min-width: 551px) and (max-width: 1000px) {
+  .home_section .name {
+    font-size: 50px;
+  }
+}
 .home_section .job {
   font-size: 25px;
   font-weight: 500;
   color: #A2A2A2;
   margin-bottom: 30px;
+}
+@media (max-width: 550px) {
+  .home_section .job {
+    font-size: 18px;
+  }
 }
 .home_section .links {
   margin-top: 20px;
@@ -248,7 +282,7 @@ body::before {
   border-bottom-right-radius: 80px;
 }
 .about_section .modal .modal-content::-webkit-scrollbar-thumb {
-  background: rgb(182, 76, 76);
+  background: #b64c4c;
   border-radius: 20px;
 }
 @media (min-width: 576px) {
@@ -347,9 +381,12 @@ body::before {
   font-size: 14px;
   color: #afaeaa;
 }
-.about_section .modal .right-side .service .about_title {
+.about_section .modal .right-side .service .about_title p {
   font-size: 18px;
   font-weight: 600;
+  border-bottom: 2px solid #eb4a4c;
+  width: 40%;
+  margin-bottom: 0;
 }
 .about_section .modal .right-side .service .list ul {
   margin: 0px;
@@ -393,8 +430,8 @@ body::before {
 }
 .portfolio_section .projects .screen {
   display: block;
-  width: 300px;
-  height: 320px;
+  width: 262px;
+  height: 280px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
