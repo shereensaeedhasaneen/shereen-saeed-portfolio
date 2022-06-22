@@ -19,60 +19,67 @@
             display: block;
             // width: 300px;
             // height: 320px;
-            width: 262px;
-            height: 280px;
+            width: 100%;
+            min-height: 100%;
             overflow: hidden;
             position: relative;
             margin: 0 auto;
             img{
 
-                bottom:-100%;
+                //bottom:0;
+                top: 0;
                 width: 100%;
-                height: auto;
+               // height: 100%;
                 position: absolute;
                 z-index: 0;
                 margin:0;
                 padding:0;
-                -webkit-transition: top 5s;
-                -moz-transition: top 5s;
-                -ms-transition: top 5s;
-                -o-transition: top 5s;
-                transition: bottom 5s;
+                -webkit-transition: all 5s;
+                -moz-transition: all 5s;
+                -ms-transition: all 5s;
+                -o-transition: all 5s;
+                transition: all 5s;
 
-                &.care_project {
-                    bottom: -180%;
+                /*&.care_project {
+                    bottom: -174%;
                 }
                 &.ipharmacy{
-                    bottom: -75%;
+                    bottom: -71%;
                 }
                 &.medfest {
-                    bottom: -400%;
+                    bottom: -390%;
                 }
                 &.tamweel{
-                    bottom: -170%;
+                    bottom: -164%;
                 }
                 &.agrimisr{
-                    bottom: -213%;
+                    bottom: -207%;
                 }
 
                 &.ayadymisr{
                     bottom: -252%;
-                }
+                }*/
             }
         }
       
         .list_inner{
+            // width: 100%;
+            // height: auto;
+            // clear: both;
+            // float: left;
+            // position: relative;
+            // border-radius: 10px;
+            // overflow: hidden;
+
+
             width: 100%;
-            height: auto;
-            clear: both;
-            float: left;
-            position: relative;
+            height: 100%;
             border-radius: 10px;
             overflow: hidden;
 
             &:hover{
                 img{
-                    bottom: 0;
+                    top: calc(-3000px/10);
                     -webkit-transition: all 5s;
                     -moz-transition: all 5s;
                     -ms-transition: all 5s;
@@ -124,5 +131,16 @@
         }
     }
   
+    .owl-item{
+        width: 276px;
+        margin-right: 15px;
+        border-radius: 20px;
+        background: #000000;
+        height: 291px;
+        @media (min-width:400px) and (max-width:650px) {
+            height: 370px;
+            width: 265px;
+        }
+    }
 
 }

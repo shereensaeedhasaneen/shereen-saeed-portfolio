@@ -7,6 +7,7 @@ $border_dashed_color :  1px dashed rgba(255,255,255,.15);
 body{
     scroll-behavior: smooth;
     font-family: $font_header !important;
+    word-break: break-word;
 }
 
 main{
