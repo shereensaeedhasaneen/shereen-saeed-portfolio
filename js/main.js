@@ -1,3 +1,13 @@
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector("#portfolio_loader").style.visibility = "visible";
+  } else {
+      document.querySelector("#portfolio_loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+  }
+};
+
 /////////open and close mobile menu //////////
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
