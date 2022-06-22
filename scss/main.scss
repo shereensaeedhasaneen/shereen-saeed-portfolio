@@ -63,6 +63,7 @@ main{
     transition: opacity 1s ease-out;
     opacity: 0;
 }
+@import './layout/preloader.scss';
 @import './base-structure/base.scss';
 @import './layout/header.scss';
 @import './pages/home.scss';
